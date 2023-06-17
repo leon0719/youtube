@@ -18,7 +18,7 @@ pip install pytube
 2. 執行以下指令：
 
 ```shell
-python download_yt_video.py -v [影片連結] -o [目錄路徑]
+python download_yt_video.py -v [影片連結] -o [目錄路徑] --audio_only
 ```
 
 3. 替換 `[影片連結]` 為你要下載的 YouTube 影片連結。
@@ -31,7 +31,7 @@ python download_yt_video.py -v [影片連結] -o [目錄路徑]
 以下是使用範例：
 
 ```shell
-python download.py -v "https://www.youtube.com/watch?v=dQw4w9WgXcQ" -o "./downloads/"
+python download.py -v "https://www.youtube.com/watch?v=dQw4w9WgXcQ" -o "./downloads/" --audio_only
 ```
 
 這將會下載 `https://www.youtube.com/watch?v=dQw4w9WgXcQ` 這個 YouTube 影片並儲存到 `./downloads/` 目錄中。
