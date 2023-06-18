@@ -2,7 +2,6 @@ import argparse
 from pytube import YouTube
 
 
-
 def download_mp4(video_url, output_directory, audio_only=False):
     try:
         youtube = YouTube(video_url)
