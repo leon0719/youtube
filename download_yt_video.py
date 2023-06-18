@@ -2,12 +2,6 @@ import argparse
 from pytube import YouTube
 
 
-def on_progress(stream, chunk, file_handle, bytes_remaining):
-    total_size = stream.filesize
-    bytes_downloaded = total_size - bytes_remaining
-    progress = (bytes_downloaded / total_size) * 100
-    print(f"下載進度：{progress:.2f}%")
-
 
 def download_mp4(video_url, output_directory, audio_only=False):
     try:
@@ -16,7 +10,7 @@ def download_mp4(video_url, output_directory, audio_only=False):
             video = youtube.streams.get_audio_only()
         else:
             video = youtube.streams.get_highest_resolution()
-        video.download(output_directory, on_progress=on_progress)
+        video.download(output_directory)
         print("下載完成！")
     except Exception as e:
         print("下載失敗：", str(e))
